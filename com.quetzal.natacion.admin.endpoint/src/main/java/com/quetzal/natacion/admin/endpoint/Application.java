@@ -1,3 +1,9 @@
+/**
+ * Classname: Application.java
+ * Author: Diego Hernandez Cote
+ * Date: 07 de feb. 2025
+ * quetzal developer
+ */
 package com.quetzal.natacion.admin.endpoint;
 
 import org.springframework.boot.SpringApplication;
