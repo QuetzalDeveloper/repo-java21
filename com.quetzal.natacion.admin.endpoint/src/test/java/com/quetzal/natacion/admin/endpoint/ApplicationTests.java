@@ -1,10 +1,10 @@
-package com.quetzal.springboot.java21.simple.apirest;
+package com.quetzal.natacion.admin.endpoint;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SimpleApiRestApplicationTests {
+class ApplicationTests {
 
 	@Test
 	void contextLoads() {

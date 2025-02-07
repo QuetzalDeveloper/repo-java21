@@ -1,13 +1,13 @@
-package com.quetzal.springboot.java21.simple.apirest;
+package com.quetzal.natacion.admin.endpoint;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SimpleApiRestApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SimpleApiRestApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }

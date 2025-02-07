@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.1</version>
+		<version>3.4.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>Simple_API_REST</artifactId>
+	<groupId>com.quetzal.natacion.admin.endpoint</groupId>
+	<artifactId>com.quetzal.natacion.admin.endpoint</artifactId>
 	<version>1.0.0</version>
-	<name>Simple_API_REST</name>
-	<description>A simple API-REST project with java 21</description>
+	<name>com.quetzal.natacion.admin.endpoint</name>
+	<description>A API-REST project with java 21</description>
 	<url/>
 	<licenses>
 		<license/>
