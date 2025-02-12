@@ -30,13 +30,13 @@ public class AdminServiceImp implements AdminService {
 	public void validateAdmin(Integer adminId) throws AppException {
 		
 		if(Utils.isNullOrLessThan1(adminId)) {
-			throw new AppException(HttpStatus.BAD_REQUEST.value(), "Invalid adminId = " + adminId,ExceptionsEnum.ERROR_ADMIN_ID_INVALID);
+			throw new AppException(HttpStatus.BAD_REQUEST.value(), "Invalid adminId = " + adminId,ExceptionsEnum.ERROR_INVALID_ADMIN_ID);
 		}
 		
 		AdminDTO admin = dao.validateAdmin(adminId);
 		
 		if(Utils.isNullOrEmpty(admin)) {
-			throw new AppException(HttpStatus.BAD_REQUEST.value(), "adminId not found or not exists = " + adminId,ExceptionsEnum.ERROR_ADMIN_ID_INVALID);
+			throw new AppException(HttpStatus.BAD_REQUEST.value(), "adminId not found or not exists = " + adminId,ExceptionsEnum.ERROR_INVALID_ADMIN_ID);
 		} else {
 			LOGGER.info("{}",admin);
 		}

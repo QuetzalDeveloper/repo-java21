@@ -9,10 +9,17 @@ package com.quetzal.natacion.admin.endpoint.enums;
 public enum ExceptionsEnum {
 
 		ERROR_UNEXPECTED_EXCEPTION("ERROR_UNEXPECTED_EXCEPTION", "error.unexpected_exception"),
-		ERROR_INVALID_PARAMETER("ERROR_INVALID_PARAMETER", "error.invalid_parameter"),
-		ERROR_DATES_INVALIDS("ERROR_DATES_INVALIDS", "error.invalid_dates"),
-		ERROR_ADMIN_ID_INVALID("ERROR_ADMIN_ID_INVALID", "error.invalid.adminId"),
-		ERROR_DATABASE_PROCESS("ERROR_DATABASE_PROCESS", "error.database.process");
+		ERROR_DATABASE_PROCESS("ERROR_DATABASE_PROCESS", "error.database.process"), 
+		//General
+		ERROR_INVALID_PARAMETER("ERROR_INVALID_PARAMETER", "error.invalid.parameter"),
+		ERROR_INVALID_DATES("ERROR_INVALID_DATES", "error.invalid.dates"),
+		ERROR_INVALID_ADMIN_ID("ERROR_INVALID_ADMIN_ID", "error.invalid.adminId"),
+		
+		//ROLE
+		ERROR_INVALID_ROLE_NAME("ERROR_INVALID_ROLE_NAME", "error.invalid.role.name"), 
+		ERROR_INVALID_ROLE_ID("ERROR_INVALID_ROLE_ID", "error.invalid.role.id"), 
+		ERROR_INVALID_ROLE_PARAM_ACTIVE("ERROR_INVALID_ROLE_PARAM_ACTIVE", "error.invalid.role.param.active"), 
+		ERROR_INVALID_ROLE_REQUEST("ERROR_INVALID_ROLE_REQUEST", "error.invalid.role.request");
 		
 		private String errorCode;
 		private String errorMessageKey;

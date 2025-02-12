@@ -44,4 +44,14 @@ public class AppException extends Exception {
 	public String getErrorMessageKey() {
 		return errorMessageKey;
 	}
+	
+	public ExceptionResponse getExceptionResponse() {
+		ExceptionResponse res = new ExceptionResponse();
+		res.setStatus(status);
+		res.setErrorCode(errorCode);
+		res.setErrorMessageKey(errorMessageKey);
+		res.setError(errorMessage);
+		
+		return res;
+	}
 }

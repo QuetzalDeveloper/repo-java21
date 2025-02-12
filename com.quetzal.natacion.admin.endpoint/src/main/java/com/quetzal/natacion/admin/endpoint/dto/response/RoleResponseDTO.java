@@ -19,6 +19,7 @@ public class RoleResponseDTO implements Serializable {
 	private boolean active;
 	private Integer adminId;
 	private String adminAccount;
+	private String description;
 	
 	public Integer getId() {
 		return id;
@@ -56,11 +57,17 @@ public class RoleResponseDTO implements Serializable {
 	public void setAdminAccount(String adminAccount) {
 		this.adminAccount = adminAccount;
 	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
 	
 	@Override
 	public String toString() {
-		return "RoleResponse [id=" + id + ", descKey=" + descKey + ", createDate=" + createDate + ", active=" + active
-				+ ", adminId=" + adminId + ", adminAccount=" + adminAccount + "]";
-	}
-	
+		return "RoleResponseDTO [id=" + id + ", descKey=" + descKey + ", createDate=" + createDate + ", active="
+				+ active + ", adminId=" + adminId + ", adminAccount=" + adminAccount + ", description=" + description
+				+ "]";
+	}		
 }
