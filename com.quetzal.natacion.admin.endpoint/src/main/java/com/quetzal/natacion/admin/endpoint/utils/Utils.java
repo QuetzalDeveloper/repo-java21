@@ -42,4 +42,9 @@ public class Utils {
 		return sdf.format(timestamp);
 	}
 
+	public static boolean isEmail(String email) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

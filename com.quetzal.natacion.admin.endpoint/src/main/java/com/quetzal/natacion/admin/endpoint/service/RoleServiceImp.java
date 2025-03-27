@@ -37,7 +37,7 @@ public class RoleServiceImp implements RoleService {
 	public List<RoleResponseDTO> getRoles(Integer adminId, Integer active) throws AppException {
 		LOGGER.info("[adminId = {}]. GetRoles. Active = {}", adminId, active);
 		
-		if(Utils.isNullOrLessThan1(active)) {
+		if(Utils.isNullOrEmpty(active)) {
 			throw new AppException(HttpStatus.BAD_REQUEST.value(), "The param active is invalid",ExceptionsEnum.ERROR_INVALID_ROLE_PARAM_ACTIVE);
 		}
 		
