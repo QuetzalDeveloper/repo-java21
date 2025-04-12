@@ -23,6 +23,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
 @Entity
@@ -32,8 +33,9 @@ public class User implements UserDetails{
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer id;
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="users.seq_user")
+	@SequenceGenerator(name = "users.seq_user", sequenceName = "users.seq_user", allocationSize = 1)
+	private Long id;
 
 	@Column(name="account", unique=true, nullable=false)
 	private String username;
@@ -58,16 +60,19 @@ public class User implements UserDetails{
 
 	@Column(name="birth_date")
 	private LocalDateTime birthDate;
+	
+	@Column
+	private boolean active;
 
 	@Column
 	private String email;
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
-
-	public void setId(Integer id) {
-		id = id;
+	
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getName() {
@@ -118,7 +123,15 @@ public class User implements UserDetails{
 		this.email = email;
 	}
 
-	 @Override
+	 public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
+	}
+
+	@Override
 	    public Collection<? extends GrantedAuthority> getAuthorities() {
 	        return List.of(new SimpleGrantedAuthority(role.name()));
 	    }

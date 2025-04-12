@@ -22,7 +22,10 @@ public enum ExceptionsEnum {
 		ERROR_INVALID_PASSWORD("ERROR.INVALID.PASSWORD", "error.invalid.password"),
 		ERROR_INVALID_EMAIL("ERROR.INVALID.EMAIL", "error.invalid.email"),
 		ERROR_INVALID_TELEPHONE("ERROR.INVALID.TELEPHONE", "error.invalid.telephone"),
-		ERROR_INVALID_BIRTHDATE("ERROR.INVALID.BIRTHDATE", "error.invalid.birthdate"),
+		ERROR_INVALID_BIRTHDATE("ERROR.INVALID.BIRTHDATE", "error.invalid.birthdate"), 
+		ERROR_EXISTS_USERNAME("ERROR.EXISTS.USERNAME", "error.exists.username"),
+		ERROR_EXISTS_TELEPHONE("ERROR.EXISTS.TELEPHONE", "error.exists.telephone"),
+		ERROR_EXISTS_EMAIL("ERROR.EXISTS.EMAIL", "error.exists.email"),
 		;
 		
 		private String errorCode;
