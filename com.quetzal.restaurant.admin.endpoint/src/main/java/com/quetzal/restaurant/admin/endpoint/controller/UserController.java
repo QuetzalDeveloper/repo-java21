@@ -62,6 +62,15 @@ public class UserController {
 		}
 	}
 	
+	@GetMapping("/active")
+	public ResponseEntity<?> activeUser(@RequestHeader Long userId, @RequestParam Long id, @RequestParam boolean active) throws AppException {
+		try {
+			return new ResponseEntity<>(userService.activeUser(userId, id, active), HttpStatus.OK);
+		} catch (AppException e) {
+			return new ResponseEntity<>(e.getExceptionResponse(), HttpStatus.ACCEPTED.INTERNAL_SERVER_ERROR);
+		}
+	}
+	
 	
 
 }

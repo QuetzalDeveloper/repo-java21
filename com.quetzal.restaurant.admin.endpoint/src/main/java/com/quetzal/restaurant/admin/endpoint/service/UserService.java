@@ -110,6 +110,18 @@ public class UserService implements UserDetailsService {
 		return userRepository.save(user);
 	}
 
+	public Integer activeUser(Long userId, Long id, boolean active) throws AppException {
+		validateUserExists(id);
+		return userRepository.updateActiveUser(id, active);
+	}
+
+	private void validateUserExists(Long id) throws AppException {
+		if (userRepository.findById(id).isEmpty()) {
+			throw new AppException(HttpStatus.CONFLICT.value(), "The user not exists",
+					ExceptionsEnum.ERROR_EXISTS_USERNAME);
+		}
+	}
+
 	private void validateUserUpdate(User original, UserRequest request) throws AppException{
 		if (!original.getUsername().equals(request.getUsername())) {
 			if (userRepository.findByUsername(original.getUsername()).isPresent()) {
